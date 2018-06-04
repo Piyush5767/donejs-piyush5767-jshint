@@ -1,0 +1,37 @@
+{
+  "name": "donejs-piyush-5767-jshint",
+  "version": "0.0.0",
+  "description": "add jshint and .editconfig to my donejs app",
+  "homepage": "https://donejs.com/",
+  "author": {
+    "name": "https://donejs.com/",
+    "email": "test@abc.com",
+    "url": "https://donejs.com/"
+  },
+  "main": "lib/",
+  "scripts": {
+    "test": "npm run jshint && npm run mocha",
+    "jshint": "jshint test/. default/index.js --config",
+    "mocha": "mocha test/ --timeout 120000",
+    "publish": "git push origin --tags && git push origin",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
+  },
+  "keywords": [
+    "canjs",
+    "donejs",
+    "donejs-generator"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.10",
+    "yeoman-generator": "^1.1.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5",
+    "mocha": "^2.5.3",
+    "yeoman-assert": "^2.2.3",
+    "yeoman-test": "^1.7.2"
+  }
+}
